@@ -1,5 +1,6 @@
 {
   "name": "node-email-reply-parser",
+  "main": "index.js",
   "version": "0.1.4",
   "description": "Parses emails to remove replies and other potentially unwanted data",
   "author": "Travis Ralston <travis@t2bot.io>",
