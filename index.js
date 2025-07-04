@@ -3,7 +3,7 @@
  * For the full license information, please see the LICENSE file distributed with this package.
  */
 
-var Parser = require("./lib/Parser");
+import Parser from "./lib/Parser.js";
 
 /**
  * Parses the given text into an email
@@ -21,20 +21,21 @@ function parse(text, visibleTextOnly) {
     } else return email;
 }
 
-module.exports = parse;
+export default parse;
 
 // Only run this code if we're the main entry point (useful for quick testing locally)
-if (require.main === module) {
+// Only run this code if we're the main entry point (useful for quick testing locally)
+if (import.meta.url === `file://${process.argv[1]}`) {
     // we only import fs and path here because it is bloat to the library otherwise
-    var fs = require('fs');
-    var path = require('path');
+    const fs = await import('fs');
+    const path = await import('path');
 
     if (process.argv.length != 3) {
         console.error("Invalid argument. Syntax: node index.js <file path>");
         process.exit(1);
     }
 
-    var fileContents = fs.readFileSync(process.argv[2], 'utf8');
+    var fileContents = fs.default.readFileSync(process.argv[2], 'utf8');
     var text = parse(fileContents, true);
 
     console.log(text);
