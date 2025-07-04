@@ -31,15 +31,8 @@
     "lib/"
   ],
   "types": "index.d.ts",
-  "scripts": {
-    "test": "mocha test/*Test.js"
-  },
   "dependencies": {
     "esrever": "^0.2.0",
-    "lodash": "^4.17.21"
-  },
-  "devDependencies": {
-    "assert": "^2.0.0",
-    "mocha": "^9.1.2"
+    "lodash-es": "^4.17.21"
   }
 }
