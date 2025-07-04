@@ -16,13 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/t2bot/node-email-reply-parser.git"
+    "url": "https://github.com/verybestjp/node-email-reply-parser.git"
   },
   "bugs": {
     "url": "https://github.com/t2bot/node-email-reply-parser/issues"
-  },
-  "engines": {
-    "node": ">= 14.0.0"
   },
   "files": [
     "LICENSE",
